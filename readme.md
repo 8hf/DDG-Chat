@@ -1,3 +1,7 @@
+> [!WARNING]
+> 由于 DuckDuckGo 的单IP并发限制，导致429错误，以及无服务器环境 Vercel, Cloudflare Workers 基本被 DuckDuckGo 封禁等[原因](https://github.com/leafmoes/DDG-Chat/issues/19#issuecomment-2698038822)
+> 本项目已归档，请尝试其他项目，非常感谢你对本项目的支持，但我们不得不再见！
+
 <div align="center">
 <img src="https://socialify.git.ci/leafmoes/DDG-Chat/image?font=Inter&forks=1&issues=1&logo=https://duckduckgo.com/assets/logo_header.v109.svg&name=1&pattern=Plus&pulls=1&stargazers=1&theme=Auto" alt="DDG-Chat"/>
 
@@ -5,7 +9,7 @@
 
 支持 Vercel, Cloudflare Workers, Docker, Render 等
 
-支持 o3 mini, GPT 4o mini, Claude 3 Haiku, Llama 3.3 70B, Mixtral 8x7B 模型
+支持 o3 mini, GPT 4o mini, Claude 3 Haiku, Llama 3.3 70B, Mixtral Small 3 模型
 
 所有模型均由 DuckDuckGo 匿名提供
 
@@ -73,7 +77,7 @@ curl --request POST 'https://chatcfapi.r12.top/v1/chat/completions' \
 - gpt-4o-mini
 - claude-3-haiku
 - llama-3.3-70b
-- mixtral-8x7b
+- mixtral-small-3
 - o3-mini
 
 ## 手动部署
@@ -134,7 +138,7 @@ npm install
 
 3. 打开文件 /api/index.js ，取消最后一行的注释，然后执行 `npm run publish:cf`
 
-### Hugging Face
+### Hugging Face (推荐)
 
 1. 创建一个新空间：[Create a new Space ](https://huggingface.co/new-space)
     ```
